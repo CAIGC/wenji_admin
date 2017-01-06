@@ -8,4 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('login', { title: 'Express',width : width+'px;',seed : seed});
 });
 
+router.get('/welcome', function(req, res, next) {
+  res.render('layout', {shopName : "caiguocheng" ,adminName : "caigc",env:express().get('env')});
+});
+
 module.exports = router;

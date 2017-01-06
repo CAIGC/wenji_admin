@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        title 优之派管理系统
+        link(rel='stylesheet', href='//p.padmindata.youzhipai.cn/css/style.css')
+        link(rel='stylesheet', href='/stylesheets/slider.css')
+        link(rel='stylesheet', href='//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+        //script(src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js')
+
+        script(src='/javascripts/jquery.min.js')
+        script(src='/javascripts/jquery-ui.min.js')
+        meta(charset='utf-8')
+    body.login
+        div.logo
+        .layout_login
+            .login
+                div
+                    form(action='/user/login' method='POST')
+                        ul
+                            li
+                                span 用户名
+                                input(type="text" name='username')
+                                p(style="display:none",class="tips" id='username_message') 用户名或错误
+                            li
+                                span 密码
+                                input(type="password" name='password')
+                                input(type="hidden" name='seed' value='#{seed}')
+                            li
+                                #slide-to-unlock
+                                #unlock-slider-wrapper
+                                    #unlock-slider.ui-slider(style='width:#{width}')
+        <!-- #BeginLibraryItem "/Library/footer.lbi" -->
+        footer 深圳优之派电子商务有限公司　版权所有
+        <!-- #EndLibraryItem -->
+        script(src='/javascripts/login.js')

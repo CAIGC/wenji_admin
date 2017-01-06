@@ -1,0 +1,158 @@
+doctype html
+html
+    head
+        title 优之派管理系统
+        - var host
+        - if (env == 'development')
+            link(rel='stylesheet',href='//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css')
+            link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/bootstrap.css')
+            link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/public-type.css')
+            meta(charset='utf-8')
+            script(src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js')
+            script(src='//t.padmindata.youzhipai.cn/js/bootstrap.min.js')
+            script(src='//t.padmindata.youzhipai.cn/js/laydate.js')
+            script(src='/javascripts/left-common.js')
+            script(src='//t.padmindata.youzhipai.cn/js/form-validation.js')
+            - host = 'http://t.padmin.youzhipai.cn/product/'
+        - else
+            link(rel='stylesheet',href='//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css')
+            link(rel='stylesheet',href='//p.padmindata.youzhipai.cn/css/bootstrap.css')
+            link(rel='stylesheet',href='//p.padmindata.youzhipai.cn/css/public-type.css')
+            meta(charset='utf-8')
+            script(src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js')
+            script(src='//p.padmindata.youzhipai.cn/js/bootstrap.min.js')
+            script(src='//p.padmindata.youzhipai.cn/js/laydate.js')
+            script(src='/javascripts/left-common.js')
+            script(src='//p.padmindata.youzhipai.cn/js/form-validation.js')
+            - host = 'http://product1.youzhipai.cn/product/'
+    body
+        .youzhipai-backstage
+            .backstage-header
+                ul.clearfix
+                    li.logo
+                    li.user-account
+                        strong=shopName+'-'
+
+                        span
+                            i #{adminName}
+                            ol.header-menu-list
+                                li
+                                    a(href="../account/setting.html") 账号设置
+                                li
+                                    a(href="#select-shop" data-toggle="modal" onclick='shopList()') 切换店铺
+                        a(href="/users/logout" title="退出") 退出
+            .backstage-content.clearfix
+                .backstage-left-side
+                    ul.index.customer-style
+                        li
+                            strong
+                            a(href="javascript:void(0)" value="/index" title="首页") 首页
+                    ul.backstage-order.backstage-management
+                        li.clearfix
+                            strong
+                            span 订单管理
+                        li
+                            a(href="javascript:void(0)" value="/order/index" title="订单管理") 订单管理
+                        li
+                            a(href="javascript:void(0)" value="/gift/index" title="礼包管理") 礼包管理
+                        li
+                            a(href="javascript:void(0)" value="/sender/index" title="发货管理") 发货管理
+                        li
+                            a(href="javascript:void(0)" value="/finance/index" title="商品销售") 商品销售
+                        li
+                            a(href="javascript:void(0)" value="/service/index" title="换货管理") 换货管理
+                    ul.backstage-commodity.backstage-management
+                        li.clearfix
+                            strong
+                            span 商品管理
+                        li
+                            a(href=host+"category/list" target="_blank" title="分组管理") 分组管理
+                        li
+                            a(href=host+"prod/productList" target="_blank" title="商品管理") 商品管理
+                        li
+                            a(href=host+"recommende/list" target="_blank" title="精品推荐") 精品推荐
+                        li
+                            a(href=host+"groupon/list" target="_blank" title="团购") 团购
+                    ul.backstage-supplier.backstage-management
+                        li.clearfix
+                            strong
+                            span 供货商管理
+                        li
+                            a(href="javascript:void(0)" value="/supplier/index" title="供货商管理") 供货商管理
+                    ul.coupon.customer-style.backstage-management
+                        li.clearfix
+                            strong
+                            - if (env == 'development')
+                                a(href="http://ticket1.youzhipai.cn/coupon/list" target="_blank" title="优惠券管理") 优惠券管理
+                            - else
+                                a(href="http://ticket.youzhipai.cn/coupon/list" target="_blank" title="优惠券管理") 优惠券管理
+                    ul.backstage-shop.backstage-management
+                        li.clearfix
+                            strong
+                            span 线下销售管理
+                        li
+                            a(href="javascript:void(0)" value="/sales/list" title="线下销售") 线下销售
+                        li
+                            a(href="javascript:void(0)" value="/sales/salesman" title="业务员管理") 业务员管理
+                    ul.backstage-shop.backstage-management
+                        li.clearfix
+                            strong
+                            span 店铺管理
+                        li
+                            a(href="javascript:void(0)" value="/shopSetting/index" title="店铺设置") 店铺设置
+                        li
+                            a(href=host+"decoration/microPageList" target="_blank" title="店铺装修") 店铺装修
+                        li
+                            a(href=host+"nav/toAdd" target="_blank" title="店铺导航") 店铺导航
+                    ul.backstage-shop.backstage-management
+                        li.clearfix
+                            strong
+                            span 广告管理
+                        li
+                            a(href=host+"ad/toAdd" target="_blank" title="浮层广告") 浮层广告
+                    ul.backstage-pickup-card.customer-style.backstage-management
+                        li.clearfix
+                            strong
+                            a(href="javascript:void(0)" value="/enchashment/index" title="收入提现") 收入提现
+                    ul.backstage-order.customer-style.backstage-management
+                        li.clearfix
+                            strong
+                            a(href="javascript:void(0)" value="/invoice/index" title="发票管理") 发票管理
+
+                    ul.backstage-permissions.backstage-management
+                        li.clearfix
+                            strong
+                            span 账号权限管理
+                        li
+                            a(href="javascript:void(0)" value="/smUser/index" title="用户管理") 用户管理
+                        li
+                            a(href="javascript:void(0)" value="/smGroup/index" title="用户组管理") 用户组管理
+                    ul.backstage-wechat.customer-style.backstage-management
+                        li.clearfix
+                            strong
+                            - if (env == 'development')
+                                a(href="http://testweixin.youzhipai.cn/openwechat/showMenu" target="_blank" title="微信管理") 微信管理
+                            - else
+                                a(href="http://weixin.youzhipai.cn/openwechat/showMenu" target="_blank" title="微信管理") 微信管理
+                #content.backstage-right-content
+                #showWarning.modal.fade.in(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true', style='display: none; padding-right: 17px;')
+        #select-shop.modal.fade.in(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                        h4#myModalLabel.modal-title 选择店铺
+                    .modal-body
+                        ul.list_shop#change_shop_container
+                    .modal-footer
+                        button.btn.btn-default.js-modal-close(type='button', data-dismiss='modal') 取消
+                        button.btn.btn-primary.js-btn-save(type='button', data-form-type='order-detail-seller-message', data-complete-text='提交成功 ✔', data-loading-text='提交中...', autocomplete='off' onclick='confirmChangeShop();') 提交
+
+
+        .backstage-footer
+            p
+                |深圳优之派电子商务有限公司
+                |版权所有
+
+
