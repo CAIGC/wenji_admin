@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>胖吴</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" />
+	<link rel="stylesheet" href="../css/swiper.min.css" />
+	<link rel="stylesheet" href="../css/public-type.css" />
+	<link rel="stylesheet" href="../css/addProduct.css" />
+</head>
+<body>
+<div class="youzhipai-backstage"><!-- #BeginLibraryItem "/Library/top.lbi" -->	<!-- 头部-start -->
+	<div class="backstage-header">
+		<ul class="clearfix">
+			<li class="logo"></li>
+			<li class="user-account">
+				<span>
+					<i>text3</i>
+					<ol class="header-menu-list">
+						<li><a href="../account/setting.html">账号设置</a></li>
+						<li><a href="../shop/shops.html">店铺选择</a></li>
+					</ol>				
+				</span> 
+				<a href="#" title="退出">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 头部-end -->
+<!-- #EndLibraryItem --><div class="backstage-content clearfix"><!-- #BeginLibraryItem "/Library/nav.lbi" -->		<!-- 左侧导航栏-start -->
+		<div class="backstage-left-side">
+			<ul class="index customer-style">
+				<li> <strong></strong> 
+					<a href="../index.html" title="首页">首页</a> </li>
+			</ul>
+			<ul class="backstage-order backstage-management">
+				<li class="clearfix"> <strong></strong> <span>订单管理</span> </li>
+				<li> <a href="../order/index.html" title="订单管理">订单管理</a> </li>
+				<li> <a href="../package/index.html" title="礼包管理">礼包管理</a> </li>
+				<li> <a href="../send/index.html" title="发货管理">发货管理</a> </li>
+			</ul>
+			<ul class="backstage-commodity backstage-management">
+				<li class="clearfix"> <strong></strong> <span>商品管理</span> </li>
+				<li> <a href="../category/list.html" title="分类管理">分组管理</a> </li>
+				<li> <a href="productList.html" title="产品管理">商品管理</a> </li>
+				<li> <a href="../category/recommendation.html" title="精品推荐">精品推荐</a> </li>
+			</ul>
+			<ul class="backstage-distributor backstage-management">
+				<li class="clearfix"> <strong></strong> <span>分销管理</span> </li>
+				<li> <a href="../distribution/productList.html" title="分销商品">分销商品</a> </li>
+				<li> <a href="../distribution/list.html" title="分销管理">分销管理</a> </li>
+			</ul>
+			<ul class="backstage-supplier backstage-management">
+				<li class="clearfix"> <strong></strong> <span>供货管理</span> </li>
+				<li> <a href="../supplier/index.html" title="供货商管理">供货商管理</a> </li>
+				<li> <a href="../warehouse-manage/list2.html" title="精品推荐">仓库管理</a> </li>
+				<li> <a href="../warehouse-manage/list.html" title="仓存管理">仓存管理</a> </li>
+			</ul>
+			<ul class="coupon customer-style backstage-management">
+				<li class="clearfix"> <strong></strong> <a href="../coupons/coupons_all.html" title="优惠券管理">优惠券管理</a> </li>
+			</ul>
+			<ul class="backstage-order backstage-management">
+				<li class="clearfix"> <strong></strong> <span>线下销售管理</span> </li>
+				<li> <a href="../sales/list.html" title="线下销售">线下销售</a> </li>
+				<li> <a href="../sales/salesman.html" title="业务员管理">业务员管理</a> </li>
+			</ul>
+			<ul class="backstage-order customer-style backstage-management">
+				<li class="clearfix"> <strong></strong> <a href="../invoice/index.html" title="发票管理">发票管理</a> </li>
+			</ul>
+			<ul class="backstage-shop backstage-management">
+				<li class="clearfix"> <strong></strong> <span>店铺管理</span> </li>
+				<li> <a href="../shop/setting.html" title="店铺设置">店铺设置</a> </li>
+				<li> <a href="../module/micro_page_list.html" title="店铺装修">店铺装修</a> </li>
+				<li> <a href="../shop/nav.html" title="店铺导航">店铺导航</a> </li>
+			</ul>
+			<ul class="backstage-ad backstage-management">
+				<li class="clearfix"> <strong></strong> <span>广告管理</span> </li>
+				<li> <a href="../ad/floating-ad.html"  title="浮层广告">浮层广告</a> </li>
+			</ul>
+			<ul class="backstage-withdrawals customer-style backstage-management">
+				<li class="clearfix"> <strong></strong> <a href="../trade/income.html" title="收入提现">收入提现</a> </li>
+			</ul>
+			<ul class="backstage-permissions backstage-management">
+				<li class="clearfix"> <strong></strong> <span>账号权限管理</span> </li>
+				<li> <a href="../user/index.html" title="用户管理">用户管理</a> </li>
+				<li> <a href="../group/index.html" title="用户组管理">用户组管理</a> </li>
+			</ul>
+			<ul class="backstage-wechat customer-style backstage-management">
+				<li class="clearfix"> <strong></strong> 
+					<a href="" title="微信管理">微信管理</a> </li>
+			</ul>
+		</div>
+		<!-- 左侧导航栏-end -->
+<!-- #EndLibraryItem --><!-- 右侧内容-start -->
+		<div class="backstage-right-content">
+			<div class="layout">
+				<div class="backstage-content-height clearfix">
+					<h3>编辑商品 <a href="#history" data-toggle="modal">查看编辑记录</a></h3>
+				</div>
+				<!--star!-->
+				<div class="layout_addproduct" id="addProduct">
+					<div class="left"> 
+						<!--基本信息star!-->
+						<div class="box">
+							<div class="bar">基本信息</div>
+							<div class="group">
+								<div class="item">
+									<label><em>*</em>图片：</label>
+									<div>
+										<ul class="img clearfix" id="sortable1">
+											<li class="basic-pic">
+												<span>
+													<img src="../images/0.jpg" />
+													<a class="js-remove-image" href="javascript:;">删除</a>
+												</span>
+											</li>
+											<li class="basic-pic">
+												<span>
+													<img src="../images/qyj.jpg" />
+													<a class="js-remove-image" href="javascript:;">删除</a>
+												</span>
+											</li>
+											<li class="basic-pic">
+												<span>
+													<img src="../images/img.jpg" />
+													<a class="js-remove-image" href="javascript:;">删除</a>
+												</span> 
+											</li>
+											<li class="basic-pic"> 
+												<span>
+													<img src="../images/qyj.jpg" />
+													<a class="js-remove-image" href="javascript:;">删除</a>
+												</span> 
+											</li>
+											<li class="ui-state-disabled">
+												<label for="basicFile" class="add-img"></label>
+												<input type="file" id="basicFile" name="" />
+											</li>
+										</ul>
+										<p class="help-desc">建议尺寸：640 x 高度不限；且多图尺寸要相同。最多支持5张图片</p>
+										<p class="error hide">至少上传1张图片</p>
+									</div>
+								</div>
+								<div class="item">
+									<label><em>*</em>名称：</label>
+									<div class="js-basic-title">
+										<input type="text" />
+										<p class="error hide">商品名长度不能少于一个字或者多于100个字</p>
+									</div>
+								</div>
+								<div class="item">
+									<label>简单描述：</label>
+									<div class="js-basic-simple">
+										<textarea></textarea>
+									</div>
+								</div>
+								<div class="item">
+									<label><em>*</em>商品类目：</label>
+									<div>
+										<select>
+											<option>请选择商品类目</option>
+											<option>女装男装</option>
+											<option>鞋类箱包</option>
+											<option>母婴用品</option>
+											<option>护肤彩妆</option>
+											<option>汇吃美食</option>
+											<option>珠宝配饰</option>
+											<option>家装建材</option>
+											<option>家居家纺</option>
+											<option>汽车用品</option>
+											<option>手机数码</option>
+											<option>家电办公</option>
+											<option>运动户外</option>
+											<option>花鸟文娱</option>
+										</select>
+										<p class="help-desc">选错类目会影响搜索精准率和商品的转化率。</p>
+										<p class="error">请选择商品类目</p>
+									</div>
+								</div>
+								<div class="item">
+									<label>分组：</label>
+									<div class="show_class js-del-group">
+										<span>分类1<i></i></span>
+										<span>分类1<i></i></span>
+										<span>分类1<i></i></span>
+										<span>分类1<i></i></span>
+										<span>分类1<i></i></span>
+										<button type="button" class="btn btn-primary sel_class" data-toggle="modal" data-target="#class">选择分组</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--基本信息end!--> 
+						<!--规格/价格star!-->
+						<div class="box">
+							<div class="bar">规格/价格</div>
+							<div class="group">
+								<div class="item">
+									<label><em>*</em>价格：</label>
+									<div class="price js-basic-price">
+										<input type="text" placeholder="0.00" />
+										元
+										<input type="text" placeholder="原价" />
+										元
+										<p class="error hide">商品价格不能为空</p>
+									</div>
+								</div>
+								<div class="item">
+									<label><em>*</em>规格：</label>
+									<div>
+										<button class="btn btn-primary js-add-norms">+添加规格</button>
+										<div class="more hide">
+											<div class="js-norms-name">
+												<input type="text" placeholder="请输入规格名称" />
+												<p class="error hide">规格名称不能为空</p>
+											</div>
+											<div class="js-norms-table">
+												<table width="100%" border="0" cellspacing="1" cellpadding="0">
+													<thead>
+														<tr>
+															<th scope="col">规格值</th>
+															<th scope="col">价格</th>
+															<th scope="col">库存</th>
+															<th scope="col">别名</th>
+															<th scope="col">编码</th>
+															<th scope="col">图片</th>
+															<th scope="col">排序</th>
+															<th scope="col">操作</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="norms-worth"><input type="text" /></td>
+															<td><input type="text" /></td>
+															<td><input type="text" /></td>
+															<td><input type="text" /></td>
+															<td><input type="text" /></td>
+															<td>
+																<label for="addNormsPic">
+																	<span class="add-img">+加图</span>
+																	<input class="hide" id="addNormsPic" type="file" name="" />
+																</label>
+																<span class="hide">
+																	<img src="" />
+																	<a href="javascript:;">删除</a>
+																</span>
+															</td>
+															<td><input type="text" /></td>
+															<td>
+																<a href="javascript:;" title="删除">删除</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<p class="error hide">规格值/价格/库存/编码 不能为空</p>
+												<button class="btn btn-primary js-add-normstabel">+增加</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--规格/价格end!--> 
+						<!--运费/其它star!-->
+						<div class="box">
+							<div class="bar">运费/其它</div>
+							<div class="group">
+								<div class="item js-basic-origin">
+									<label>供货商：</label>
+									<div>
+										<select>
+											<option>供货商名称</option>
+										</select>
+									</div>
+								</div>
+								<div class="item js-basic-origin">
+									<label>产地：</label>
+									<div>
+										<input type="text" />
+									</div>
+								</div>
+								<div class="item js-basic-freight">
+									<label>运费：</label>
+									<div class="freight">
+										<label>
+											<input type="radio" checked name="freight" />
+											免邮费</label>
+										<p>
+											<textarea placeholder="运费简单说明"></textarea>
+										</p>
+									</div>
+								</div>
+								<div class="item">
+									<label>收货短信：</label>
+									<div><select><option>清远鸡收货提醒</option></select><span class="refresh-add"><a href="javascript:;">刷新</a>|<a href="../sms/add.html">+新建</a></span>
+										<p class="help-desc">发货后系统自动把模板内容通过短信形式发给客户</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--运费/其它end!-->
+						<!--详细描述star!-->
+						<div class="box">
+							<div class="bar">详细描述</div>
+							<div class="detailed">
+								<p>
+									<textarea name="editor1" id="editor1"></textarea>
+								</p>
+							</div>
+						</div>
+						<!--详细描述end!-->
+					</div>
+					<!--预览star!-->
+					<div class="right preview">
+						<div class="head"></div>
+						<div class="title_bar"></div>
+						<div class="md_preview" id="appBasic"> 
+							<!-- 图片滚动star !-->
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="../images/0.jpg"/>
+									</div>
+									<div class="swiper-slide">
+										<img src="../images/qyj.jpg"/>
+									</div>
+									<div class="swiper-slide">
+										<img src="../images/img.jpg"/>
+									</div>
+									<div class="swiper-slide">
+										<img src="../images/qyj.jpg"/>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<!-- 图片滚动end !-->
+							<h1 class="title js-app-title">名称</h1>
+							<div class="title_cmt js-app-simple">简单描述</div>
+							<div class="price js-app-price">
+								<span>￥0.00</span>
+								<span>￥0.00</span>
+							</div>
+							<ul class="spec_info js-app-norms">
+								<li>
+									<span>规格</span>
+									<p>
+										<span>规格值</span>
+									</p>
+								</li>
+							</ul>
+							<ul class="exp_info">
+								<li class="js-app-origin">
+									<span>产地</span>
+								</li>
+								<li class="describe js-app-describe">
+									<p>运费简单说明</p>
+								</li>
+							</ul>
+							<div class="details">
+								<a href="javascript:void(0);">
+									<span>商品详情</span>
+									<i></i>
+								</a>
+							</div>
+							<!-- 加入购物车star -->
+							<div class="add_shopping"> <span></span> </div>
+							<!-- 加入购物车end -->
+							<div class="wrapper">
+								<ul id="f_btn" class="footer_btn">
+									<li class="car"> <a href="javascript:void(0);" class="shopping-cart"></a> </li>
+									<li class="treat_yourself"> <a onClick="document.getElementById('win').className='win'" href="javascript:void(0);">犒劳自己</a> </li>
+									<li> <a href="javascript:void(0);" onClick="document.getElementById('win2').className='win'">赠送他人</a> </li>
+								</ul>
+							</div>
+							<!--犒劳自己弹出框star!-->
+							<div id="win" class="win_none">
+								<div class="layout_win"> <a class="close" onClick="document.getElementById('win').className='win_none'" href="javascript:void(0);"></a>
+									<div class="commodity"> <span class="img"><img src="../images/qyj.jpg" /></span>
+										<div>
+											<h3>名称</h3>
+											<strong>￥0.00</strong> </div>
+									</div>
+									<ul class="spec">
+										<li>
+											<h3>规格：</h3>
+											<p id="forMyselfRadio">
+												<label>
+													<input type="radio" name="productItemId" value="1481" checked="checked" />
+													<span>值</span> 
+												</label>
+												<label>
+													<input type="radio" name="productItemId" value="1481" />
+													<span>值</span> 
+												</label>
+											</p>
+										</li>
+									</ul>
+									<ul class="num">
+										<li>购买数量</li>
+										<li> <span> <a id="minus" href="javascript:void(0);">-</a>
+											<input type="tel" name="buyAmount" id="buyAmount" th:value="1" value="1"/>
+											<a id="add" href="javascript:void(0);">+</a> </span> </li>
+									</ul>
+									<!--</form>-->
+									<div class="btn" onclick="buyForMyself()"><a href="javascript:void(0);">下一步</a></div>
+								</div>
+								<div id="transparent_bg" class="transparent_bg"></div>
+							</div>
+							<!--犒劳自己弹出框end!--> 
+							<!--赠送他人弹出框star!-->
+							<div id="win2" class="win_none">
+								<div class="layout_win"> <a class="close" onClick="document.getElementById('win2').className='win_none'" href="javascript:void(0);"></a>
+									<div class="commodity"> 
+										<span class="img"><img src="../images/qyj.jpg" />
+										</span>
+										<div>
+											<h3>名称</h3>
+											<strong>￥0.00</strong> 
+										</div>
+									</div>
+									<ul class="spec">
+										<li>
+											<h3>规格：</h3>
+											<p id="sendToOtherRadio">
+												<label>
+													<input type="radio" name="sendToOtherProductItemId" value="1481" checked="checked"/>
+													<span>值</span>
+												</label>
+												<label>
+													<input type="radio" name="sendToOtherProductItemId" value="1481"/>
+													<span>值</span>
+												</label>
+											</p>
+										</li>
+									</ul>
+									<div class="btn" onclick="sendToOther()"><a href="javascript:void(0);">下一步</a></div>
+								</div>
+								<div class="transparent_bg"></div>
+							</div>
+							<!--赠送他人弹出框end!--> 
+							<!-- 加入购物车star! -->
+							<div id="win1" class="win_none">
+								<div class="layout_win">
+									<a class="close" onClick="document.getElementById('win1').className='win_none'" href="javascript:void(0);"></a>
+									<div class="commodity"> 
+										<span class="img">
+											<img src="../images/qyj.jpg" />
+										</span>
+										<div>
+											<h3 class="js-shop-title">名称</h3>
+											<strong class="js-shop-price">￥0.00</strong>
+										</div>
+									</div>
+									<ul class="spec">
+										<li>
+											<h3>规格：</h3>
+											<p id="forMyselfRadio">
+												<label>
+													<input type="radio" name="productItemId" value="1481" checked="checked"/>
+													<span>值</span> 
+												</label>
+												<label>
+													<input type="radio" name="productItemId" value="1481"/>
+													<span>值</span> 
+												</label>
+											</p>
+										</li>
+									</ul>
+									<ul class="num">
+										<li>购买数量</li>
+										<li> <span> <a href="javascript:void(0);">-</a>
+											<input type="tel" name="buyMeasure" id="buyMeasure" value="1" />
+											<a href="javascript:void(0);">+</a> </span> </li>
+									</ul>
+									<div class="btn add-to-cart"> <span>加入购物车</span> </div>
+								</div>
+								<div id="transparent_bg" class="transparent_bg"></div>
+							</div>
+							<!-- 加入购物车star! --> 
+						</div>
+					</div>
+					<!--预览end!--> 
+				</div>
+				<!--end!-->
+				<!--微信分享设置star!-->
+				<div class="layout_addproduct">
+					<div class="left"> 
+						<!--基本信息star!-->
+						<div class="box" id="weChatshare">
+							<div class="bar">微信分享设置</div>
+							<div class="group">
+								<div class="item">
+									<label><em>*</em>图片：</label>
+									<div>
+										<ul class="img">
+											<li class="ui-state-disabled">
+												<label for="weChatFile" class="add-img"></label>
+												<input type="file" id="weChatFile" name="" />
+											</li>
+										</ul>
+										<p class="help-desc">建议尺寸：300 x 300像素</p>
+										<p class="error hide">请上传1张图片</p>
+									</div>
+								</div>
+								<div class="item js-title-share">
+									<label><em>*</em>标题：</label>
+									<div>
+										<input type="text" />
+										<p class="error hide">标题不能为空</p>
+									</div>
+								</div>
+								<div class="item js-describe-share">
+									<label><em>*</em>描述：</label>
+									<div>
+										<textarea></textarea>
+										<p class="error hide">描述不能为空</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--预览star!-->
+					<div class="right preview">
+						<div class="head"></div>
+						<div class="title_bar"></div>
+						<div class="md_preview_share js-weChat-share">
+							<div>
+								<div>
+									<h2 class="js-weChat-title">分享标题</h2>
+									<span class="img js-weChat-img"></span>
+									<p class="js-weChat-describe">分享描述</p>
+								</div>
+								<span class="headimg"></span> 
+							</div>
+						</div>
+					</div>
+					<!--预览end!--> 
+				</div>
+				<!--微信分享设置end!-->
+				<div class="layout_btn">
+					<button class="btn btn-primary">提交</button>
+				</div>
+			</div>
+		</div>
+		<!-- 右侧内容-end -->
+	</div>
+
+	<div class="backstage-footer"><p>深圳优之派电子商务有限公司　版权所有</p></div>
+</div>
+
+<!--分组star!-->
+<div class="modal fade order_detail_seller_message in" id="class" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div role="document" class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" id="myModalLabel">分组</h4>
+			</div>
+			<div class="modal-body">
+				<ul class="list_class">
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类1</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类2</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类3</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类4</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类5</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类6</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类7</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类8</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类9</span> 
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类10</span> 
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default js-modal-close" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary js-btn-save">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--分组end!-->
+<!--编辑记录star!-->
+<div class="modal fade in" id="history" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div role="document" class="modal-dialog" style="width:900px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" id="myModalLabel">编辑记录</h4>
+			</div>
+			<div class="modal-body">
+				<div class="list-logs">
+					<table>
+						<thead>
+							<tr>
+								<th>操作人</th>
+								<th>操作时间</th>
+								<th>业务内容</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>根本英俊</td>
+								<td>2016-02-02 08:10</td>
+								<td>商品：编号（0258）正宗清远鸡 天然山林 168天自由放养 价格：158.0 </td>
+							</tr>
+							<tr>
+								<td>根本英俊</td>
+								<td>2016-02-02 08:10</td>
+								<td>商品：编号（0356）清远鸡初生蛋 小个头的聪明鸡蛋</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="no-record">暂无记录</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default js-modal-close" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--编辑记录end!-->
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src='../js/jquery-ui.min.js'></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/addShop.js"></script>
+
+<script src="../js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+ CKEDITOR.replace( 'editor1' );
+
+	var swiper;
+	addShop.loadFun = function() {
+
+		// app图片滚动
+		swiper = new Swiper('.swiper-container', {
+		    pagination: '.swiper-pagination',
+		    paginationClickable: true,
+		    spaceBetween:0,
+		    centeredSlides: true,
+		    autoplay: 0,
+			loop : false,
+		    autoplayDisableOnInteraction: false
+		});
+
+
+		// app隐藏图层-关闭
+		$(".transparent_bg").click(function(){
+
+			$(".win").attr("class","win_none");
+		});
+		// app购物车
+		$(".add_shopping").click(function() {
+
+			$("#win1").addClass("win").removeClass("win_none");
+		})
+
+		// 基本信息**************************************************
+		var fdAddProduct = $("#addProduct");
+
+		// 图片拖拽
+		$("#sortable1").sortable({
+			distance: 20,
+			items: "li:not(.ui-state-disabled)",
+			stop: addShop.imagesTab
+		});
+
+		// 基本信息-图片-删除
+		fdAddProduct.on("click", ".js-remove-image", function() {
+			var obj = $(this);
+
+			addShop.removeImage(obj);
+		})
+
+		// 基本信息-图片-添加
+		fdAddProduct.on("change", "#basicFile", function() {
+			var obj = $(this);
+
+			addShop.addImage(obj);
+		})
+
+		// 修改名称
+		fdAddProduct.on("blur", ".js-basic-title input", function() {
+			var obj = $(this);
+
+			addShop.basicTitle(obj);
+		})
+
+		// 简单描述
+		fdAddProduct.on("blur", ".js-basic-simple textarea", function() {
+			var obj = $(this);
+
+			addShop.basicSimple(obj);
+		})
+
+		// 分组-删除
+		fdAddProduct.on("click", ".js-del-group i", function() {
+			var obj = $(this);
+
+			addShop.removeGroup(obj);
+		})
+
+		// 分组-保存
+		$(".modal").on("click", ".js-btn-save", function() {
+			var obj = $(this);
+
+			addShop.saveGroup(obj);
+		})
+
+		// 价格
+		fdAddProduct.on("blur", ".js-basic-price input", function() {
+			var obj = $(this);
+
+			addShop.basicPrice(obj);
+		})
+
+		// 规格-添加规格
+		fdAddProduct.on("click", ".js-add-norms", function() {
+			var obj = $(this);
+
+			addShop.addbasicNorms(obj);
+		})
+
+		// 规格-规格名称
+		fdAddProduct.on("blur", ".js-norms-name input", function() {
+			var obj = $(this);
+
+			addShop.normsName(obj);
+		})
+
+		// 规格-规格值/价格/库存/编码
+		fdAddProduct.on("blur", ".js-norms-table input", function() {
+			var obj = $(this);
+
+			addShop.normsTable(obj);
+		})
+
+		// 规格-规格值
+		fdAddProduct.on("blur", ".norms-worth input", function() {
+			var obj = $(this);
+
+			addShop.normsWorth(obj);
+		})
+		
+		// 规格-增加
+		fdAddProduct.on("click", ".js-add-normstabel", function() {
+			var obj = $(this);
+
+			addShop.addnormsTable(obj);
+		})
+
+		// 规格-删除
+		fdAddProduct.on("click", ".js-norms-table .del", function() {
+			var obj = $(this);
+			addShop.delnormsTable(obj);
+		})
+
+		// 产地
+		fdAddProduct.on("blur", ".js-basic-origin input", function() {
+			var obj = $(this);
+
+			addShop.basicOrigin(obj);
+		})
+
+		// 运费
+		fdAddProduct.on("blur", ".js-basic-freight textarea", function() {
+			var obj = $(this);
+
+			addShop.basicFreight(obj);
+		})
+
+
+		// 微信分享设置************************************************
+		var fdWeChatshare = $("#weChatshare");
+
+		// 图片-删除
+		fdWeChatshare.on("click", ".js-del-share", function() {
+			var obj = $(this);
+
+			addShop.delShare(obj);
+		})
+
+		// 图片-添加
+		fdWeChatshare.on("change", "#weChatFile", function() {
+			var obj = $(this);
+
+			addShop.addShare(obj);
+		})
+
+		// 图片-标题
+		fdWeChatshare.on("blur", ".js-title-share input", function() {
+			var obj = $(this);
+
+			addShop.titleShare(obj);
+		})
+
+		// 图片-描述
+		fdWeChatshare.on("blur", ".js-describe-share textarea", function() {
+			var obj = $(this);
+
+			addShop.describeShare(obj);
+		})
+
+		var data = {};
+		// 提交
+		$("#submitBtn").click(function() {
+			data.typeName = $(".js-norms-name input").val();
+			data.data = [];
+			$(".js-norms-table tbody tr").each(function() {
+				var $this = $(this);
+				var obj = {};
+
+				obj.productNormName = $this.children('td').eq(0).find("input").val();
+				obj.unitPrice = $this.children('td').eq(1).find("input").val();
+				obj.quantity = $this.children('td').eq(2).find("input").val();
+				obj.productNum = $this.children('td').eq(3).find("input").val();
+				obj.normFile = $this.children('td').eq(4).find('img').attr("src");
+				obj.sequenceNum = $this.children('td').eq(5).find('input').val();
+
+				data.data.push(obj);
+			})
+		})
+	}
+	$(document).ready(addShop.loadFun);
+</script>
+</body>
+<html>

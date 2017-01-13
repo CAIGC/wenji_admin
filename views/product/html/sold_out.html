@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>胖吴</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/public-type.css" />
+<link rel="stylesheet" href="../css/commodity.css">
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="youzhipai-backstage"><!-- #BeginLibraryItem "/Library/top.lbi" -->	<!-- 头部-start -->
+	<div class="backstage-header">
+		<ul class="clearfix">
+			<li class="logo"></li>
+			<li class="user-account">
+				<span>
+					<i>text3</i>
+					<ol class="header-menu-list">
+						<li><a href="../account/setting.html">账号设置</a></li>
+						<li><a href="../shop/shops.html">店铺选择</a></li>
+					</ol>				
+				</span> 
+				<a href="#" title="退出">退出</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 头部-end -->
+<!-- #EndLibraryItem --><div class="backstage-content clearfix"><!-- #BeginLibraryItem "/Library/nav.lbi" -->		<!-- 左侧导航栏-start -->
+		<div class="backstage-left-side">
+			<ul class="index customer-style">
+				<li> <strong></strong> 
+					<a href="../index.html" title="首页">首页</a> </li>
+			</ul>
+			<ul class="backstage-order backstage-management">
+				<li class="clearfix"> <strong></strong> <span>订单管理</span> </li>
+				<li> <a href="../order/index.html" title="订单管理">订单管理</a> </li>
+				<li> <a href="../package/index.html" title="礼包管理">礼包管理</a> </li>
+				<li> <a href="../send/index.html" title="发货管理">发货管理</a> </li>
+			</ul>
+			<ul class="backstage-commodity backstage-management">
+				<li class="clearfix"> <strong></strong> <span>商品管理</span> </li>
+				<li> <a href="../category/list.html" title="分类管理">分组管理</a> </li>
+				<li> <a href="productList.html" title="产品管理">商品管理</a> </li>
+				<li> <a href="../category/recommendation.html" title="精品推荐">精品推荐</a> </li>
+			</ul>
+			<ul class="backstage-distributor backstage-management">
+				<li class="clearfix"> <strong></strong> <span>分销管理</span> </li>
+				<li> <a href="../distribution/productList.html" title="分销商品">分销商品</a> </li>
+				<li> <a href="../distribution/list.html" title="分销管理">分销管理</a> </li>
+			</ul>
+			<ul class="backstage-supplier backstage-management">
+				<li class="clearfix"> <strong></strong> <span>供货管理</span> </li>
+				<li> <a href="../supplier/index.html" title="供货商管理">供货商管理</a> </li>
+				<li> <a href="../warehouse-manage/list2.html" title="精品推荐">仓库管理</a> </li>
+				<li> <a href="../warehouse-manage/list.html" title="仓存管理">仓存管理</a> </li>
+			</ul>
+			<ul class="coupon customer-style backstage-management">
+				<li class="clearfix"> <strong></strong> <a href="../coupons/coupons_all.html" title="优惠券管理">优惠券管理</a> </li>
+			</ul>
+			<ul class="backstage-order backstage-management">
+				<li class="clearfix"> <strong></strong> <span>线下销售管理</span> </li>
+				<li> <a href="../sales/list.html" title="线下销售">线下销售</a> </li>
+				<li> <a href="../sales/salesman.html" title="业务员管理">业务员管理</a> </li>
+			</ul>
+			<ul class="backstage-order customer-style backstage-management">
+				<li class="clearfix"> <strong></strong> <a href="../invoice/index.html" title="发票管理">发票管理</a> </li>
+			</ul>
+			<ul class="backstage-shop backstage-management">
+				<li class="clearfix"> <strong></strong> <span>店铺管理</span> </li>
+				<li> <a href="../shop/setting.html" title="店铺设置">店铺设置</a> </li>
+				<li> <a href="../module/micro_page_list.html" title="店铺装修">店铺装修</a> </li>
+				<li> <a href="../shop/nav.html" title="店铺导航">店铺导航</a> </li>
+			</ul>
+			<ul class="backstage-ad backstage-management">
+				<li class="clearfix"> <strong></strong> <span>广告管理</span> </li>
+				<li> <a href="../ad/floating-ad.html"  title="浮层广告">浮层广告</a> </li>
+			</ul>
+			<ul class="backstage-withdrawals customer-style backstage-management">
+				<li class="clearfix"> <strong></strong> <a href="../trade/income.html" title="收入提现">收入提现</a> </li>
+			</ul>
+			<ul class="backstage-permissions backstage-management">
+				<li class="clearfix"> <strong></strong> <span>账号权限管理</span> </li>
+				<li> <a href="../user/index.html" title="用户管理">用户管理</a> </li>
+				<li> <a href="../group/index.html" title="用户组管理">用户组管理</a> </li>
+			</ul>
+			<ul class="backstage-wechat customer-style backstage-management">
+				<li class="clearfix"> <strong></strong> 
+					<a href="" title="微信管理">微信管理</a> </li>
+			</ul>
+		</div>
+		<!-- 左侧导航栏-end -->
+<!-- #EndLibraryItem --><div class="backstage-right-content">
+			<div class="layout">
+				<div class="backstage-content-height clearfix">
+					<h3>商品管理</h3>
+				</div>
+			<div class="add_search"> <a href="addProduct.html" class="btn btn-primary" id="btnAddProduct">添加商品</a>
+				<div class="search">
+					<input type="text" name="productName" placeholder="请输入商品名称" value="" />
+					<button type="submit" class="btn btn-default" onClick="">搜索</button>
+				</div>
+			</div>
+			<div class="tab2">
+				<ul>
+					<li class=""><a href="productList.html">出售中的商品</a></li>
+					<li class=""><a href="warehouse.html">仓库中的商品</a></li>
+					<li class="on"><a href="sold_out.html">已售罄的商品</a></li>
+					<li class=""><a href="shelf.html">已下架的商品</a></li>
+				</ul>
+			</div>
+			<div class="function_group">
+				<label><input type="checkbox" id="chk_all" />全选</label>
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#shelf">批量下架</button>
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#del" style="margin-left:10px">批量删除</button>
+				<button type="button" class="btn btn-default" style="margin-left:10px" data-toggle="modal" data-target="#class">分类至</button>
+				<span class="group"> <em>查看</em>
+				<select>
+					<option>所有分组</option>
+				</select>
+				</span> </div>
+			<div class="list">
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th class="title">商品名称</th>
+							<th class="price">价格</th>
+							<th>库存</th>
+							<th>创建时间</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td class="img_title"><span class="img"><img src="../images/qyj.jpg" /></span> <span class="title">澳洲音符白葡萄酒750ml 经典系列莎当妮</span></td>
+							<td class="price">158.00<span>原价：189.00</span></td>
+							<td class="stock">0</td>
+							<td class="time">2015-12-31 14:55:53</td>
+							<td class="operation"><a href="#preview" data-toggle="modal">预览</a>-<a href="#">编辑</a>-<a href="#shelf" data-toggle="modal">下架</a>-<a href="#del" data-toggle="modal">删除</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="function_group p_b">
+				<label><input type="checkbox" id="chk_all" />全选</label>
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#shelf">批量下架</button>
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#del" style="margin-left:10px">批量删除</button>
+				<button type="button" class="btn btn-default" style="margin-left:10px" data-toggle="modal" data-target="#class">分类至</button>
+				<div class="footer paging">
+					<div class="paging"><span class="disabled">上一页</span><span class="current">1</span><a href="javascript:;" class="tcdNumber">2</a><a href="javascript:;" class="tcdNumber">3</a><a href="javascript:;" class="tcdNumber">4</a><span>...</span><a href="javascript:;" class="tcdNumber">133</a><a href="javascript:;" class="nextPage">下一页</a><span>共1326条、133页，到第
+						<input type="text">
+						页<a href="javascript:void(0)">确定</a></span></div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="backstage-footer"><p>深圳优之派电子商务有限公司　版权所有</p></div>
+</div>
+<!--预览star!-->
+<div class="modal fade order_detail_seller_message in" id="preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div role="document" class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" id="myModalLabel">预览</h4>
+			</div>
+			<div class="modal-body preview">
+				<div class="phone">
+					<div class="title_bar"></div>
+					<iframe frameborder="0" class="md_preview" src="http://weixin.youzhipai.cn/productapi/12/77_product.html?t=1458203821812"></iframe>
+					<div class="footer"></div>
+				</div>
+				<div class="code_link">
+					<div>
+						<h2>商品二维码</h2>
+						<p>微信扫一扫,在手机上查看并分享</p>
+						<span><img src="../images/code.png" /></span>
+					</div>
+					<div>
+						<h2>商品链接</h2>
+						<p>商品页面链接</p>
+						<span class="link">http://weixin.youzhipai.cn/productapi/12/77_product.html?t=1458203821812</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default js-modal-close" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--预览end!--> 
+<!--分类至star!-->
+<div class="modal fade order_detail_seller_message in" id="class" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div role="document" class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" id="myModalLabel">分类至</h4>
+			</div>
+			<div class="modal-body">
+				<ul class="list_class">
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类1</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类2</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类3</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类4</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类5</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类6</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类7</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类8</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类9</span>
+						</label>
+					</li>
+				 	<li>
+						<label>
+							<input type="checkbox" />
+							<span>分类10</span>
+						</label>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default js-modal-close" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary js-btn-save" data-form-type="order-detail-seller-message" data-complete-text="提交成功 ✔" data-loading-text="提交中..." autocomplete="off">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--分类至end!--> 
+<!--下架star!--> 
+<div class="modal fade" id="shelf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header no_line">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+			</div>
+			<div class="modal-body dialog_box">
+				<span class="icon question"></span>
+				<p class="ask">确认下架？</p>
+				<p class="cmt">下架后，店铺内将不再展示</p>
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary"> 确认 </button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--下架end!-->
+<!--删除star!--> 
+<div class="modal fade" id="del" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header no_line">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+			</div>
+			<div class="modal-body dialog_box">
+				<span class="icon question"></span>
+				<p class="ask">是否删除商品？</p>
+				<p class="cmt">删除商品后，内容将不能恢复！</p>
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary"> 确认 </button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--删除end!-->
+</body>
+<html>

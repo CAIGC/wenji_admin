@@ -1,0 +1,44 @@
+.layout
+  .backstage-content-height.clearfix
+    h3 商品管理
+  .add_search
+    a#btnAddProduct.btn.btn-primary(href="javascript:void(0)" value="/product/add") 添加商品
+    //a.btn.btn-primary(href='#distribution-goods', data-toggle='modal', style='margin-left:15px') 添加分销商品
+    .search
+      input(type='text', name='SEARCH_LIKE_S_productName', placeholder='请输入商品名称')
+      input(type='hidden' name='pageNo' value='1')
+      button.btn.btn-default 搜索
+  .tab2
+    ul
+      li.on
+        a(href="javascript:void(0)" name="SEARCH_EQ_I_status" value='1') 出售中的商品
+      li
+        a(href="javascript:void(0)" name="SEARCH_EQ_I_status" value='2') 仓库中的商品
+      li
+        a(href="javascript:void(0)" name="SEARCH_EQ_I_status" value='3') 已售罄的商品
+      li
+        a(href="javascript:void(0)" name="SEARCH_EQ_I_status" value='4') 已下架的商品
+  .function_group
+    label
+      input#chk_all(type='checkbox')
+      | 全选
+    button.btn.btn-default(type='button', data-toggle='modal', data-target='#shelf') 批量下架
+    button.btn.btn-default(type='button', data-toggle='modal', data-target='#del', style='margin-left:10px') 批量删除
+    button.btn.btn-default(type='button', style='margin-left:10px', data-toggle='modal', data-target='#class') 分类至
+    span.group
+      em 查看
+      select
+        option 所有分组
+  .list
+  .function_group.p_b
+    .footer.paging
+      .paging
+
+
+link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/addProduct.css')
+link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/commodity.css')
+script(src='/javascripts/product.js')
+script(src='/javascripts/jquery.page.js')
+
+
+

@@ -7,10 +7,13 @@ html
             link(rel='stylesheet',href='//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css')
             link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/bootstrap.css')
             link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/public-type.css')
+            link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/swiper.min.css')
             meta(charset='utf-8')
             script(src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js')
             script(src='//t.padmindata.youzhipai.cn/js/bootstrap.min.js')
+            script(src='//t.padmindata.youzhipai.cn/js/jquery-ui.min.js')
             script(src='//t.padmindata.youzhipai.cn/js/laydate.js')
+            script(src='//t.padmindata.youzhipai.cn/js/swiper.min.js')
             script(src='/javascripts/left-common.js')
             script(src='//t.padmindata.youzhipai.cn/js/form-validation.js')
             - host = 'http://t.padmin.youzhipai.cn/product/'
@@ -68,7 +71,7 @@ html
                         li
                             a(href=host+"category/list" target="_blank" title="分组管理") 分组管理
                         li
-                            a(href=host+"prod/productList" target="_blank" title="商品管理") 商品管理
+                            a(href="javascript:void(0)" value="/product/index" title="商品管理") 商品管理
                         li
                             a(href=host+"recommende/list" target="_blank" title="精品推荐") 精品推荐
                         li

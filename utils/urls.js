@@ -2,15 +2,16 @@
  * Created by CAI_GC on 2017/1/6.
  */
 var app = require('express')();
-var host;
+var product_admin_host;
 if (app.get('env') === 'development') {
-    host = '';
+    product_admin_host = 'http://127.0.0.1:8080/product-admin';
 }else if (app.get('env') === 'production'){
-    host = '';
+    product_admin_host = '';
 }
 
 var urls = {
-    login:''
+    login:'',
+    productList:product_admin_host +'/product/list'
 
 };
 

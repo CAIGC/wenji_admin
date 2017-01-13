@@ -1,0 +1,35 @@
+table
+  thead
+    tr
+      th
+      th.title 商品名称
+      th.price 价格
+      th 库存
+      th 创建时间
+      th 操作
+      input(type='hidden' id='totalcount' value=data.totalRecords)
+      if (data.totalRecords > 0)
+        each item in data.data
+            tbody
+              tr
+                td
+                  input(type='checkbox')
+                td.img_title
+                  span.img
+                    img(src=item.firstImage)
+                  span.title=item.productName
+                td.price
+                  i=item.discountPrice
+                  span='原价：'+item.price
+                td.stock=item.quantity
+                td.time=item.createTime
+                td.operation
+                  a(href='#preview', data-toggle='modal') 预览
+                  | -
+                  a(href='editProduct.html') 编辑
+                  | -
+                  a(href='#shelf', data-toggle='modal') 下架
+                  | -
+                  a(href='#del', data-toggle='modal') 删除
+                  | -
+                  a(href='compound.html') 分享图
