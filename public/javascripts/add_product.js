@@ -173,7 +173,21 @@ addShop.loadFun = function() {
     // 图片-添加
     fdWeChatshare.on("change", "#weChatFile", function() {
         var obj = $(this);
-        addShop.addShare(obj);
+        console.info(111);
+        addShop.addShare(obj,function(data){
+            $.ajax({
+                url: '/product/imgSave',
+                method: 'post',
+                data: {'image': data},
+                complete: function (data) {
+                    data=JSON.parse(data.responseText);
+                    console.info(data);
+                    if(data.data[0].accessUrl){
+                        $('#wechatShareImageUrl').val(data.data[0].accessUrl);
+                    } 
+                }
+            });
+        });
     })
 
     // 图片-标题

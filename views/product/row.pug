@@ -13,7 +13,7 @@ table
             tbody
               tr
                 td
-                  input(type='checkbox')
+                  input(type='checkbox',value=item.productId)
                 td.img_title
                   span.img
                     img(src=item.firstImage)
@@ -23,13 +23,40 @@ table
                   span='原价：'+item.price
                 td.stock=item.quantity
                 td.time=item.createTime
-                td.operation
-                  a(href='#preview', data-toggle='modal') 预览
-                  | -
-                  a(href='editProduct.html') 编辑
-                  | -
-                  a(href='#shelf', data-toggle='modal') 下架
-                  | -
-                  a(href='#del', data-toggle='modal') 删除
-                  | -
-                  a(href='compound.html') 分享图
+                if(item.status==1)
+                  td.operation
+                    a(href='#preview', data-toggle='modal') 预览
+                    | -
+                    a.edit(href='javascript:void(0)') 编辑
+                    | -
+                    a.off_shelf(href='javascript:void(0)') 下架
+                    | -
+                    a(href='#sharePic', data-toggle='modal') 分享图
+                if(item.status==2)
+                  td.operation
+                    a(href='#preview', data-toggle='modal') 预览
+                    | -
+                    a.edit(href='javascript:void(0)') 编辑
+                    | -
+                    a.publish(href='javascript:void(0)') 发布
+                    | -
+                    a.del(href='javascript:void(0)') 删除
+                    | -
+                    a(href='#sharePic', data-toggle='modal') 分享图
+                if(item.status==3)
+                  td.operation
+                    a(href='#preview', data-toggle='modal') 预览
+                    | -
+                    a.off_shelf(href='javascript:void(0)') 下架
+                    | -
+                    a#sharePic(href='#sharePic', data-toggle='modal') 分享图
+                if(item.status==4)
+                  td.operation
+                    a(href='#preview', data-toggle='modal') 预览
+                    | -
+                    a(href='#edit', data-toggle='modal') 编辑
+                    | -
+                    a.del(href='javascript:void(0)') 删除
+                    | -
+                    a#sharePic(href='#sharePic', data-toggle='modal') 分享图
+                input.id(type='hidden' name='id' value=item.productId)

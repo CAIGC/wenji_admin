@@ -6,8 +6,17 @@ var urls = require('../utils/urls');
 var service;
 
 service = {
-    productList:function(successFn,param){
-        httpUtils.doGet(urls.productList,false,successFn,param)
+    productList: function (successFn, param) {
+        httpUtils.doGet(urls.productList, false, successFn, param)
+    },
+    productPublish: function (successFn, param) {
+        httpUtils.doGet(urls.productPublish, false, successFn, param)
+    },
+    offShelf: function (successFn, param) {
+        httpUtils.doGet(urls.offShelf, false, successFn, param)
+    },
+    delete: function (successFn, param) {
+        httpUtils.doGet(urls.productDelete, false, successFn, param)
     }
 }
 module.exports = service;

@@ -22,9 +22,10 @@
     label
       input#chk_all(type='checkbox')
       | 全选
-    button.btn.btn-default(type='button', data-toggle='modal', data-target='#shelf') 批量下架
-    button.btn.btn-default(type='button', data-toggle='modal', data-target='#del', style='margin-left:10px') 批量删除
-    button.btn.btn-default(type='button', style='margin-left:10px', data-toggle='modal', data-target='#class') 分类至
+    button.btn.btn-default.publish-batch(type='button') 批量发布
+    button.btn.btn-default.off-shelf-batch(type='button', style='margin-left:10px') 批量下架
+    button.btn.btn-default.del-batch(type='button', style='margin-left:10px') 批量删除
+    //button.btn.btn-default(type='button', style='margin-left:10px', data-toggle='modal', data-target='#class') 分类至
     span.group
       em 查看
       select
@@ -33,7 +34,73 @@
   .function_group.p_b
     .footer.paging
       .paging
-
+// 预览star!
+#preview.modal.fade.order_detail_seller_message.in(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4#myModalLabel.modal-title 预览
+      .modal-body.preview
+        .phone
+          .title_bar
+          iframe.md_preview(frameborder='0', src='http://weixin.youzhipai.cn/productapi/12/77_product.html?t=1458203821812')
+          .footer
+        .code_link
+          div
+            h2 商品二维码
+            p 微信扫一扫,在手机上查看并分享
+            span
+              img(src='../images/code.png')
+          div
+            h2 商品链接
+            p 商品页面链接
+            span.link http://weixin.youzhipai.cn/productapi/12/77_product.html?t=1458203821812
+      .modal-footer
+        button.btn.btn-default.js-modal-close(type='button', data-dismiss='modal') 关闭
+// 预览end!
+// 下架star!
+#shelf.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header.no_line
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')  ×
+      .modal-body.dialog_box
+        span.icon.question
+        p.ask 确认下架？
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') 取消
+        button.btn.btn-primary(type='button')  确认
+// 下架end!
+// 删除star!
+#del.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header.no_line
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')  ×
+      .modal-body.dialog_box
+        span.icon.question
+        p.ask 是否删除？
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') 取消
+        button.btn.btn-primary(type='button')  确认
+// 删除end!
+// 发布star!
+#publish.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header.no_line
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')  ×
+      .modal-body.dialog_box
+        span.icon.question
+        p.ask 确认发布？
+        p.cmt 发布后，店铺内将展示商品
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') 取消
+        button.btn.btn-primary(type='button')  确认
+// 发布end!
+input(type='hidden' id='currentProId')
 
 link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/addProduct.css')
 link(rel='stylesheet',href='//t.padmindata.youzhipai.cn/css/commodity.css')

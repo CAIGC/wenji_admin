@@ -388,7 +388,7 @@ var addShop = {
 
     },
     // 图片-添加
-    addShare: function(obj) {
+    addShare: function(obj,successFn) {
         var fdParentsUl = obj.parents("ul"),
             picStr = '',
             imgSrc = '',
@@ -422,6 +422,7 @@ var addShop = {
 
             weChatStr = '<img src="' + data + '" alt="" title="" />';
             addShop.fdWeChatShare.find(".js-weChat-img").append(weChatStr);
+            successFn(data)
         }
         reader.readAsDataURL(file);
     },
